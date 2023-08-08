@@ -1,0 +1,73 @@
+#container {
+    display: flex;
+}
+
+main #left {
+    width: 60vw;
+    height: calc(100vh - 85px);
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+main #right {
+    width: 40vw;
+    height: calc(100vh - 85px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main #right #profile {
+    height: 75%;
+    flex-basis: 80%;
+    min-width: 265px;
+    border-radius: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 1px 1px 50px 20px gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+main #right #profile #pic img {
+    height: 200px;
+    width: 200px;
+    border-style: solid dashed solid dashed;
+    border-color: white;
+    border-width: 4px;
+    border-radius: 100px;
+    /*background-color: rgba(255, 255, 255, 0.1);*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+main #right #profile #name, main #right #profile #id  {
+    align-self: flex-start;
+    font-family: sans-serif;
+    margin-left: 5px;
+    font-size: 1.3rem;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+main #right #profile #name p, main #right #profile #id p {
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+main #right #attendance {
+    font-size: 1.3em;
+    font-family: sans-serif;
+    margin-top: 5px;
+    color: rgb(22, 196, 36);
+    text-align: center;
+
+}

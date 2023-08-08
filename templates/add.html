@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block head %}
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/add.css">
+<title>Add</title>
+
+{% endblock %}
+
+
+{% block body %}
+
+    <main>
+        <div id="container">
+            <div id="warning">
+                <h3>Warning:</h3>
+                <ol>
+                    <li>Student ID is auto generated.</li>
+                    <li>Image must have a clear view of the student's face.</li>
+                    <li>First Name and Last Name is essential to be filled.</li>
+                    <li>Admin must have restart the system after adding new students.</li>
+                </ol>
+            </div>
+
+            <div id="add_data">
+                <p>New Student Id = <span id="auto_id"> {{ next_id }} </span></p>
+                
+                <p>{% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <ul>
+                                {% for message in messages %}
+                                <li> {{ message }} </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    {% endwith %}
+                </p>
+
+                <form action="/adding_students" method="post" enctype="multipart/form-data">
+                    <div id="form_items"></div>
+                        <input type="file" name="file" autocomplete="off" required id="file">
+                        <br>
+                        <label for="add_f_name">First Name</label>
+                        <input type="text" id="add_f_name" autocomplete="off" required name="first_name">
+                        <br>
+                        <label for="add_l_name">Last Name</label>
+                        <input type="text" id="add_l_name" autocomplete="off" required name="last_name">
+                        <br>
+                        <input type="submit" id="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+{% endblock %}

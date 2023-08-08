@@ -1,0 +1,113 @@
+* {
+    font-family:  "Poppins", sans-serif;
+}
+
+
+main #container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    height: 86vh;
+}
+
+main #container #add_data {
+    padding: 20px 20px 20px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 30px;
+    display: flex;
+    gap: 7px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    /*padding: 30px 30px 40px 30px;*/
+}
+
+main #container #add_data form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main #container #add_data p {
+    font-size: 1.2em;
+    color: whitesmoke;
+}
+
+main #container #add_data form #add_f_name, main #container #add_data form #add_l_name {
+    height: 45px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: white;
+    padding: 0 0 0 0px;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 1.2em;
+    text-align: center;
+    color: black;
+}
+
+main form #file {
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 1em;
+    width: 100%;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: auto;
+    font-size: 1em;
+}
+
+main form label {
+    font-size: 1.2em;
+    color: white;
+}
+
+main #container #add_data form #add_f_name:focus, main #container #add_data form #add_l_name:focus{
+    background-color: rgba(194, 201, 99, 0.274);
+}
+
+main form #submit {
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: .3s;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+main form #submit:hover {
+    box-shadow: 1px 5px 10px 2px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+main #container #warning {
+    background-color: rgba(150, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 3px 10px 3px 10px;
+    font-size: 0.9em;
+    color: whitesmoke;
+}
+
+main #container #warning ol {
+    padding-left: 20px;
+}
+
+main #container #add_data ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+main #container #add_data li {
+    color: white;
+    font-size: 0.9em;
+    font-weight: bold;
+}

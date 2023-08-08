@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+footer {
+    display: flex;
+    box-sizing: border-box;
+    font-family: "open sans", sans-serif;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(36, 37, 42, 0.9);
+    justify-content: center;
+    align-items: center;
+    color: #edf0f1;
+    height: 25px;
+    padding: 5px;
+    font-size: 1em;
+    gap: 2rem;
+}
+
+footer:hover {
+    background-color: rgba(37, 42, 36, 1);
+    transition: 0.5s;
+}
+
+footer .social {
+    display: flex;
+    gap: 2rem;
+}
+
+footer .social i {
+    font-size: 20px;
+    align-items: center;
+    color: white;
+}
+
+footer .social .linkedin:hover {
+    color: #0077b5;
+}
+
+footer .social .facebook:hover {
+    color: #3b5998;
+}
+
+footer .social .instagram:hover {
+    color: #cd486b;
+}
+
+footer .social a {
+    text-decoration: none;
+}
+
+footer .name p span {
+    color: white;
+}
+
+footer .name p span:hover {
+    color: rgb(22, 196, 36);
+    transition: 0.2s;
+}

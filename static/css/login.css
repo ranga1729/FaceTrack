@@ -1,0 +1,103 @@
+* {
+    font-family:  "Poppins", sans-serif;
+}
+
+body {
+    background-image: url("/static/backgrounds/login.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.container {
+    width: 350px;
+    background-color: rgba(0, 0, 0, 0.438);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px 40px 30px;
+    
+}
+
+span {
+    color: white;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+
+header {
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    height: 45px;
+    width: 305px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: white;
+    padding: 0 0 0 45px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+i {
+    position: relative;
+    top: -30px;
+    left: 15px;
+    color: white;
+}
+
+::-webkit-input-placeholder {
+    color: white;
+}
+
+.submit {
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: .3s;
+    margin-bottom: 10px;
+}
+
+.submit:hover {
+    box-shadow: 1px 5px 10px 2px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.input:focus {
+    background-color: rgba(238, 255, 0, 0.1);
+}
+
+.message {
+    position: absolute;
+    top: 67%;
+    align-self: center;
+    color: rgba(216, 231, 11, 0.856);
+    font-size: 15px;
+    line-height: 15px;
+    text-decoration: underline;
+}

@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block head %}
+
+<link rel="stylesheet" href="/static/css/mark.css">
+<title>Mark</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+    var intervalID = setInterval(update_values, 5000);
+
+    // Add an ID to the <div> element
+    var divElement = document.getElementById('pic');
+
+    function update_values() {
+        $.getJSON('/profile_data',
+            function (data) {
+                $('#f_name').text(data.f_name);
+                console.log(data.f_name);
+                $('#l_name').text(data.l_name);
+                console.log(data.l_name);
+                $('#Id').text(data.Id);
+                console.log(data.Id);
+                $('#message').text(data.message);
+                document.querySelector('#pic img').src = data.link
+                console.log(data.message);
+                console.log(data);
+            });
+
+    }
+</script>
+
+
+{% endblock %}
+
+{% block body %}
+
+<main>
+    <div id="container">
+        <div id="left">
+            <img src="{{ url_for('video_feed') }}" width="100%">
+        </div>
+        <div id="right">
+            <div id="profile" onload="update_values();">
+
+                <div id="pic">
+                    <img src="/static/css/20230000.png">
+                </div>
+
+                <div id="name">
+                    <p>First name: <span id="f_name"> Not Detected! </span></p>
+                    <p>Last name: <span id="l_name"> Not Detected! </span> </p>
+                </div>
+
+                <div id="id">
+                    <p>Student ID: <span id="Id"> Not Detected! </span> </p>
+                </div>
+
+                <id id="attendance">
+                    <p><span id="message"> Not Detected! </span></p>
+                </id>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}

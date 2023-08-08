@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+    {% block head %} {% endblock %}
+
+</head>
+<body>
+    <header>
+        <img class="logo" src="/static/logo/logo.png" height="45px">
+        <a class="cta" href="home"><button>Home</button></a>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="mark" alt="Mark attendance">Mark</a></li>
+                <li><a href="check" alt="Check attendace data">Check</a></li>
+                <li><a href="add" alt="Add a new student">Add</a></li>
+            </ul>
+        </nav>
+        <div class="logout"><a href="logout" alt="Logout"><i class='bx bx-log-out'></i><button>Logout</button></a></div>
+    </header>
+
+    {% block body %} {% endblock %}
+
+    <footer>
+        <div class="name">
+            <p>Desingned and Developed By <span class="name">Ranga Bandara.</span></p>
+        </div>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/ranga-bandara-a32407266/"><i class='bx bxl-linkedin-square linkedin'></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100011668659913"><i class='bx bxl-facebook-square facebook'></i></a>
+            <a href="https://www.instagram.com/_.ranga.b/"><i class='bx bxl-instagram-alt instagram'></i></a>
+        </div>
+    </footer>
+</body>
+</html>
